@@ -1,3 +1,12 @@
-pandas
-jupyter
-pytest
+# List of packages to be installed
+pandas==0.25.1
+jupyter==1.0.0
+pytest==5.1.2
+hypothesis==4.36.2
+intake==0.5.3
+line_profiler==2.1.2
+numba==0.45
+pylint==2.3.1
+hvplot==0.4.0
+seaborn==0.9.0
+statsmodels==0.10.1
