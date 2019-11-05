@@ -1,0 +1,17 @@
+# Data sources catalog
+#
+# This file provides definition of data sources, theur locations, properties and user parameters
+# It can be shared via network, URL or a conda package.
+#
+# See also:
+#  * https://intake.readthedocs.io/en/latest/catalog.html
+
+metadata:
+  version: 1
+sources:
+  housing:
+    description: "Sample housing dataset"
+    driver: csv
+    args:
+      urlpath: "{{CATALOG_DIR}}/housing.csv"
+

@@ -1,0 +1,29 @@
+metadata:
+  version: 1
+sources:
+  housing:
+    description: "Sample housing dataset"
+    driver: csv
+    args: 
+      # urlpath: https://raw.githubusercontent.com/...
+      urlpath: "{{CATALOG_DIR}}/../data/housing.csv"
+      csv_kwargs:
+        thousands: ","  # separation of thousands, e.g. 1,234.56
+        dtype:
+          near_ocean: int  # we want 0/1 as an easy indicator for model trining
+        true_values: ["Yes", "yes"]
+        false_values: ["No", "no"]
+        na_values: ["None"]  # non standard N/A format
+    parameters:
+      github_username:
+        description: "GitHub account to download the data from"
+        type: str
+        default: "PetrWolf"
+    metadata:
+      plots:
+        median_value:
+          kind: "hist"
+          y: "median_house_value"
+          bins: 50
+          xformatter: "%d"
+          xlabel: "Median House Value (USD)"
