@@ -5,8 +5,7 @@ sources:
     description: "Sample housing dataset"
     driver: csv
     args: 
-      # urlpath: https://raw.githubusercontent.com/...
-      urlpath: "{{CATALOG_DIR}}/../data/housing.csv"
+      urlpath: "https://raw.githubusercontent.com/{{github_username}}/pydata_nyc_2019/master/data/housing.csv"
       csv_kwargs:
         thousands: ","  # separation of thousands, e.g. 1,234.56
         dtype:
